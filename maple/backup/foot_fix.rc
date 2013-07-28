@@ -1,0 +1,10 @@
+/* floatJ: This file has been included by menu.c           */
+/* and it is use for footer's decorate                     */
+/* please use VEDIT (Maple-BBS Editor) to edit this file.  */
+
+
+/* ******************* WARNING!!! ************************ */
+/* DON'T use VIM to edit, you will cause encoding troubles */
+
+#define FOOT_FIX "[m[1;36m[;34;40m[30;44m[34;40m[30;44m[34;40m[30;44m[34;40m[30;44m[1;37m[30m[m[m[m  [34m¢[30;44me[34;40m¢[30;44me[34;40m¢[30;44me[37m          [30m  [m"
+//                  [m  [34m¢[30;44me[34;40m¢[30;44me[1;37m[m[34m¢[30;44me[m[44m          [30m  [m

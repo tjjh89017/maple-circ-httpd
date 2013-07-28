@@ -6,18 +6,22 @@ ifeq ($(shell uname),linux)
 SOURCE_FLAGS = -D_POSIX_SOURCE -D_BSD_SOURCE
 endif
 
-CFLAGS = -Os -Wall -Wextra -Werror \
+CFLAGS = -Os -Wall -Wextra \
 	 $(SOURCE_FLAGS) -g \
 	 -std=gnu99 \
-	 -I../include
+	 -pipe \
+	 -I../include \
+	 -I../maple \
+	 -fomit-frame-pointer
 # -D NDEBUG
 
 CFLAGS += -m32
-LIBS = -L../lib/eserv
-LDFLAGS = -leserv -lpthread
+LIBS = -s -L../lib -L../maple -L../lib/eserv
+LDFLAGS = -ldao -leserv -lpthread -lcrypt
 
 OBJS = main.o \
 	cgi_custom.o
+
 
 .c.o:
 	$(CC) $(CFLAGS) -c $*.c
